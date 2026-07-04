@@ -1,0 +1,17 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+/**
+ * Front controller — the single entry point for all web requests.
+ * Apache/Nginx (or the PHP built-in server router) sends every request here.
+ */
+ require __DIR__ . '/EFA_FASHİON_ERP_PRO/vendor/autoload.php';
+use App\Core\App;
+use App\Core\Router;
+ls -l /home/u453165625/domains/isk-efa.com/public_html/EFA_FASHION_ERP_PRO/EFA_FASHION_ERP_PRO/vendor/autoload.php
+realpath /home/u453165625/domains/isk-efa.com/public_html/EFA_FASHION_ERP_PRO/EFA_FASHION_ERP_PRO/vendor/autoload.php
+					App::boot();
+/** @var Router $router */
+$router = require __DIR__ . '/EFA_FASHİON_ERP_PRO/config/routes.php';
+App::run($router);
